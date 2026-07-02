@@ -17,7 +17,12 @@ export GITHUB_TOKEN=your_github_token   # optional, enables AI narrative
 python backend/server.py
 ```
 
-Open **http://127.0.0.1:5000**
+```bash
+cd simtix-prototype
+python3 -m http.server 8084
+```
+Open **http://127.0.0.1:8084**
+
 
 ## Simulation workflow
 
@@ -47,4 +52,4 @@ python convert_data.py
 - `GET /api/report/<simulation_id>.json`
 - `GET /api/report/<simulation_id>.pdf`
 # simtix
-# simtix
+
