@@ -23,12 +23,11 @@ Open **http://127.0.0.1:5000**
 
 1. Create project in the wizard
 2. Start simulation
-3. Backend generates 100 customers + 500 transactions
-4. `merged_df = transactions.merge(customers, on="Customer ID", how="left")`
-5. Deterministic rule engine evaluates all merged records
-6. Readiness score is calculated in Python
-7. GPT generates executive summary + recommendations only
-8. Dashboard + report pages render results
+3. Backend generates 100 customers + 500 transactions (example )
+4. Deterministic rule engine evaluates all merged records
+5. Readiness score is calculated in Python
+6. GPT generates executive summary + recommendations only
+7. Dashboard + report pages render results
 
 ## Data
 
