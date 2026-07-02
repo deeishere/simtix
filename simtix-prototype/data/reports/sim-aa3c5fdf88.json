@@ -1,0 +1,417 @@
+{
+  "simulation_id": "sim-aa3c5fdf88",
+  "project": {
+    "project_name": "Riyadh Sukuk Platform",
+    "industry": "Tokenized Assets",
+    "country": "Saudi Arabia",
+    "regulator": "SAMA",
+    "modules": [
+      "AML",
+      "KYC",
+      "Tokenization"
+    ]
+  },
+  "events": [
+    {
+      "phase": "generating_customers",
+      "message": "Generating synthetic customers...",
+      "progress": 15
+    },
+    {
+      "phase": "generating_transactions",
+      "message": "Generating synthetic transactions...",
+      "progress": 30
+    },
+    {
+      "phase": "merging_data",
+      "message": "Merging customers and transactions...",
+      "progress": 45
+    },
+    {
+      "phase": "loading_rules",
+      "message": "Loading regulatory rules from Excel...",
+      "progress": 60
+    },
+    {
+      "phase": "running_gpt",
+      "message": "Running GPT compliance analysis...",
+      "progress": 75
+    },
+    {
+      "phase": "building_report",
+      "message": "Building readiness report...",
+      "progress": 90
+    },
+    {
+      "phase": "customer_generated",
+      "message": "Generated 100 synthetic customers",
+      "progress": 20
+    },
+    {
+      "phase": "transaction_created",
+      "message": "Generated 500 synthetic transactions",
+      "progress": 35
+    },
+    {
+      "phase": "data_merged",
+      "message": "Merged 500 customer-transaction records",
+      "progress": 50
+    },
+    {
+      "phase": "gpt_analysis",
+      "message": "GPT analyzed TXN-000001: Compliant",
+      "progress": 75
+    },
+    {
+      "phase": "gpt_analysis",
+      "message": "GPT analyzed TXN-000002: Non-Compliant",
+      "progress": 75
+    },
+    {
+      "phase": "rule_triggered",
+      "message": "Rule AML-01 flagged (High)",
+      "progress": 80
+    },
+    {
+      "phase": "gpt_analysis",
+      "message": "GPT analyzed TXN-000003: Manual Review",
+      "progress": 75
+    },
+    {
+      "phase": "rule_triggered",
+      "message": "Rule KYC-01 flagged (High)",
+      "progress": 80
+    },
+    {
+      "phase": "gpt_analysis",
+      "message": "GPT analyzed TXN-000004: Manual Review",
+      "progress": 75
+    },
+    {
+      "phase": "rule_triggered",
+      "message": "Rule KYC-01 flagged (High)",
+      "progress": 80
+    },
+    {
+      "phase": "gpt_analysis",
+      "message": "GPT analyzed TXN-000005: Manual Review",
+      "progress": 75
+    },
+    {
+      "phase": "rule_triggered",
+      "message": "Rule KYC-01 flagged (High)",
+      "progress": 80
+    },
+    {
+      "phase": "gpt_analysis",
+      "message": "GPT analyzed TXN-000006: Manual Review",
+      "progress": 75
+    },
+    {
+      "phase": "rule_triggered",
+      "message": "Rule KYC-01 flagged (High)",
+      "progress": 80
+    },
+    {
+      "phase": "readiness_updated",
+      "message": "Readiness score updated to 61%",
+      "progress": 90
+    },
+    {
+      "phase": "complete",
+      "message": "Simulation complete",
+      "progress": 100
+    }
+  ],
+  "statistics": {
+    "rules_source": "Regulatory_Rules_Features_Extraction.xlsx",
+    "gpt_cases_analyzed": 6,
+    "compliant_cases": 1,
+    "non_compliant_cases": 1,
+    "manual_review_cases": 4,
+    "critical_violations": 0,
+    "high_violations": 5
+  },
+  "violations": [
+    {
+      "rule_id": "AML-01",
+      "rule_name": "Detect funds or assets originating from an illegitimate source",
+      "severity": "High",
+      "reason": "The transaction involves a large amount from an unclear source to purchase tokenized assets, which indicates potential illegitimate source of funds.",
+      "triggered_by": [
+        "Large transaction amount",
+        "Unclear source of funds"
+      ],
+      "customer_id": "CUST-00029",
+      "transaction_id": "TXN-000002"
+    },
+    {
+      "rule_id": "KYC-01",
+      "rule_name": "Verify customer identity using an independent, trusted source before account creation or start of the relationship",
+      "severity": "High",
+      "reason": "Customer's KYC status is 'Pending Review', indicating identity verification has not been completed.",
+      "triggered_by": [
+        "KYC Status: Pending Review"
+      ],
+      "customer_id": "CUST-00045",
+      "transaction_id": "TXN-000003"
+    },
+    {
+      "rule_id": "KYC-01",
+      "rule_name": "Verify customer identity using an independent, trusted source before account creation or start of the relationship",
+      "severity": "High",
+      "reason": "Customer KYC status is 'Pending Review', indicating identity verification has not been completed.",
+      "triggered_by": [
+        "KYC Status"
+      ],
+      "customer_id": "CUST-00033",
+      "transaction_id": "TXN-000004"
+    },
+    {
+      "rule_id": "KYC-01",
+      "rule_name": "Verify customer identity using an independent, trusted source before account creation or start of the relationship",
+      "severity": "High",
+      "reason": "Customer's KYC status is 'Pending Review' and PEP flag is 'Yes', indicating incomplete verification and high-risk status.",
+      "triggered_by": [
+        "KYC Status: Pending Review",
+        "PEP Flag: Yes"
+      ],
+      "customer_id": "CUST-00028",
+      "transaction_id": "TXN-000005"
+    },
+    {
+      "rule_id": "KYC-01",
+      "rule_name": "Verify customer identity using an independent, trusted source before account creation or start of the relationship",
+      "severity": "High",
+      "reason": "Customer status is 'Pending Review', indicating identity verification has not been completed.",
+      "triggered_by": [
+        "KYC Status: Pending Review"
+      ],
+      "customer_id": "CUST-00038",
+      "transaction_id": "TXN-000006"
+    }
+  ],
+  "module_scores": {
+    "Compliance": 61,
+    "GPT Analysis": 61
+  },
+  "readiness_score": 61,
+  "ai_report": {
+    "customer_id": "CUST-00089",
+    "transaction_id": "TXN-000001",
+    "decision": "Compliant",
+    "overall_risk": "Medium",
+    "violations": [],
+    "summary": "The transaction and customer details do not trigger any of the specified regulatory rules based on the provided information.",
+    "recommendations": [],
+    "_source": "github-models",
+    "categories": [
+      "AML / CFT",
+      "Investor Protection",
+      "Sanctions Screening",
+      "Transaction Monitoring"
+    ],
+    "rules_evaluated": 20
+  },
+  "customers_count": 100,
+  "transactions_count": 500,
+  "primary_analysis": {
+    "customer_id": "CUST-00089",
+    "transaction_id": "TXN-000001",
+    "decision": "Compliant",
+    "overall_risk": "Medium",
+    "violations": [],
+    "summary": "The transaction and customer details do not trigger any of the specified regulatory rules based on the provided information.",
+    "recommendations": [],
+    "_source": "github-models",
+    "categories": [
+      "AML / CFT",
+      "Investor Protection",
+      "Sanctions Screening",
+      "Transaction Monitoring"
+    ],
+    "rules_evaluated": 20
+  },
+  "gpt_analyses": [
+    {
+      "customer_id": "CUST-00089",
+      "transaction_id": "TXN-000001",
+      "decision": "Compliant",
+      "overall_risk": "Medium",
+      "violations": [],
+      "summary": "The transaction and customer details do not trigger any of the specified regulatory rules based on the provided information.",
+      "recommendations": [],
+      "_source": "github-models",
+      "categories": [
+        "AML / CFT",
+        "Investor Protection",
+        "Sanctions Screening",
+        "Transaction Monitoring"
+      ],
+      "rules_evaluated": 20
+    },
+    {
+      "customer_id": "CUST-00029",
+      "transaction_id": "TXN-000002",
+      "decision": "Non-Compliant",
+      "overall_risk": "High",
+      "violations": [
+        {
+          "rule_id": "AML-01",
+          "rule_name": "Detect funds or assets originating from an illegitimate source",
+          "severity": "High",
+          "reason": "The transaction involves a large amount from an unclear source to purchase tokenized assets, which indicates potential illegitimate source of funds.",
+          "triggered_by": [
+            "Large transaction amount",
+            "Unclear source of funds"
+          ]
+        }
+      ],
+      "summary": "The transaction raises suspicion due to the unclear source of funds and the high-risk customer profile, indicating potential AML concerns.",
+      "recommendations": [
+        "Suspend the transaction pending source of funds verification.",
+        "Conduct a detailed investigation into the source of funds.",
+        "Report the suspicious activity to the relevant AML authorities."
+      ],
+      "_source": "github-models",
+      "categories": [
+        "AML / CFT",
+        "Investor Protection",
+        "Sanctions Screening",
+        "Transaction Monitoring"
+      ],
+      "rules_evaluated": 20
+    },
+    {
+      "customer_id": "CUST-00045",
+      "transaction_id": "TXN-000003",
+      "decision": "Manual Review",
+      "overall_risk": "High",
+      "violations": [
+        {
+          "rule_id": "KYC-01",
+          "rule_name": "Verify customer identity using an independent, trusted source before account creation or start of the relationship",
+          "severity": "High",
+          "reason": "Customer's KYC status is 'Pending Review', indicating identity verification has not been completed.",
+          "triggered_by": [
+            "KYC Status: Pending Review"
+          ]
+        }
+      ],
+      "summary": "The customer has not completed identity verification, and the transaction involves an international transfer to Kuwait, which may require further review under AML and sanctions rules. Due to incomplete KYC, the transaction cannot be automatically approved.",
+      "recommendations": [
+        "Complete the customer's identity verification using trusted sources such as Nafath or Yaqeen.",
+        "Conduct sanctions screening against the destination country and the customer.",
+        "Assess the source of funds for legitimacy.",
+        "Perform enhanced due diligence given the high risk level and pending KYC status."
+      ],
+      "_source": "github-models",
+      "categories": [
+        "AML / CFT",
+        "Investor Protection",
+        "KYC & Onboarding",
+        "Sanctions Screening",
+        "Transaction Monitoring"
+      ],
+      "rules_evaluated": 25
+    },
+    {
+      "customer_id": "CUST-00033",
+      "transaction_id": "TXN-000004",
+      "decision": "Manual Review",
+      "overall_risk": "High",
+      "violations": [
+        {
+          "rule_id": "KYC-01",
+          "rule_name": "Verify customer identity using an independent, trusted source before account creation or start of the relationship",
+          "severity": "High",
+          "reason": "Customer KYC status is 'Pending Review', indicating identity verification has not been completed.",
+          "triggered_by": [
+            "KYC Status"
+          ]
+        }
+      ],
+      "summary": "Customer's KYC verification is incomplete, and the transaction involves an international transfer of cryptocurrency to a high-risk country. The high-risk level and pending KYC status necessitate manual review before proceeding.",
+      "recommendations": [
+        "Complete the customer's KYC verification using trusted sources before processing transactions.",
+        "Conduct a detailed review of the transaction, considering the high-risk profile and international transfer to Bahrain.",
+        "Verify the source of funds and ensure compliance with AML and sanctions regulations before approval."
+      ],
+      "_source": "github-models",
+      "categories": [
+        "AML / CFT",
+        "Investor Protection",
+        "KYC & Onboarding",
+        "Sanctions Screening",
+        "Transaction Monitoring"
+      ],
+      "rules_evaluated": 25
+    },
+    {
+      "customer_id": "CUST-00028",
+      "transaction_id": "TXN-000005",
+      "decision": "Manual Review",
+      "overall_risk": "High",
+      "violations": [
+        {
+          "rule_id": "KYC-01",
+          "rule_name": "Verify customer identity using an independent, trusted source before account creation or start of the relationship",
+          "severity": "High",
+          "reason": "Customer's KYC status is 'Pending Review' and PEP flag is 'Yes', indicating incomplete verification and high-risk status.",
+          "triggered_by": [
+            "KYC Status: Pending Review",
+            "PEP Flag: Yes"
+          ]
+        }
+      ],
+      "summary": "The customer has not completed identity verification and is flagged as a PEP, which requires manual review before transaction approval. The transaction involves an international transfer to Jordan, a high-risk country, further necessitating manual oversight.",
+      "recommendations": [
+        "Complete the customer's identity verification using trusted sources such as Nafath or Yaqeen.",
+        "Conduct enhanced due diligence due to PEP status and international transaction.",
+        "Verify the source of funds and purpose of the transaction.",
+        "Hold the transaction until all compliance checks are satisfied."
+      ],
+      "_source": "github-models",
+      "categories": [
+        "AML / CFT",
+        "Customer Due Diligence (CDD)",
+        "KYC & Onboarding",
+        "Sanctions Screening",
+        "Transaction Monitoring"
+      ],
+      "rules_evaluated": 25
+    },
+    {
+      "customer_id": "CUST-00038",
+      "transaction_id": "TXN-000006",
+      "decision": "Manual Review",
+      "overall_risk": "Low",
+      "violations": [
+        {
+          "rule_id": "KYC-01",
+          "rule_name": "Verify customer identity using an independent, trusted source before account creation or start of the relationship",
+          "severity": "High",
+          "reason": "Customer status is 'Pending Review', indicating identity verification has not been completed.",
+          "triggered_by": [
+            "KYC Status: Pending Review"
+          ]
+        }
+      ],
+      "summary": "The customer has not completed identity verification, which is required before processing transactions. The transaction involves an international withdrawal of a significant amount in AED to the UAE, with the customer flagged as 'Pending Review' for KYC.",
+      "recommendations": [
+        "Complete customer identity verification using trusted sources before processing transactions.",
+        "Perform a manual review of the customer's KYC documentation and status.",
+        "Ensure all regulatory onboarding requirements are fulfilled prior to transaction approval."
+      ],
+      "_source": "github-models",
+      "categories": [
+        "AML / CFT",
+        "Investor Protection",
+        "KYC & Onboarding",
+        "Sanctions Screening",
+        "Transaction Monitoring"
+      ],
+      "rules_evaluated": 25
+    }
+  ]
+}

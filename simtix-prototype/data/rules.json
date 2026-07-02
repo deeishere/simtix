@@ -1,0 +1,247 @@
+[
+  {
+    "Category": "KYC & Onboarding",
+    "Rule_ID": "KYC-01",
+    "Rule": "Verify customer identity using an independent, trusted source before account creation or start of the relationship",
+    "Scenario": "A customer attempts to register without completing verification via Nafath or Yaqeen",
+    "Expected Behavior": "Reject account creation until identity is successfully verified"
+  },
+  {
+    "Category": "KYC & Onboarding",
+    "Rule_ID": "KYC-02",
+    "Rule": "All core customer data must be collected and verified before opening the account",
+    "Scenario": "A customer submits incomplete or partial personal data",
+    "Expected Behavior": "Prevent account activation until all required data is completed and verified"
+  },
+  {
+    "Category": "KYC & Onboarding",
+    "Rule_ID": "KYC-03",
+    "Rule": "The system must accurately support reading Arabic-language documents",
+    "Scenario": "Customer uploads an Arabic ID or residency permit and the system fails to read the data",
+    "Expected Behavior": "Halt activation and route the case to manual review"
+  },
+  {
+    "Category": "KYC & Onboarding",
+    "Rule_ID": "KYC-04",
+    "Rule": "Verify investor eligibility and the authorized agent before allowing investment",
+    "Scenario": "A minor or an agent attempts to invest without regulatory authorization",
+    "Expected Behavior": "Reject the transaction until regulatory requirements are met"
+  },
+  {
+    "Category": "KYC & Onboarding",
+    "Rule_ID": "KYC-05",
+    "Rule": "Continuously monitor the validity of identity documents",
+    "Scenario": "An investor attempts to execute a transaction after their ID has expired",
+    "Expected Behavior": "Suspend the transaction until the identity document is updated"
+  },
+  {
+    "Category": "AML / CFT",
+    "Rule_ID": "AML-01",
+    "Rule": "Detect funds or assets originating from an illegitimate source",
+    "Scenario": "A customer deposits a large amount from an unclear source to purchase tokenized assets",
+    "Expected Behavior": "Raise the risk level and suspend the transaction pending verification of the source of funds"
+  },
+  {
+    "Category": "AML / CFT",
+    "Rule_ID": "AML-02",
+    "Rule": "Monitor financial transactions in real time",
+    "Scenario": "Execution of a series of unusual financial transactions within a short period",
+    "Expected Behavior": "Issue an immediate alert and escalate the transaction for review"
+  },
+  {
+    "Category": "AML / CFT",
+    "Rule_ID": "AML-03",
+    "Rule": "Retain transaction and compliance records for the statutory retention period",
+    "Scenario": "A regulator requests review of an old transaction",
+    "Expected Behavior": "Provide all required records without any data loss"
+  },
+  {
+    "Category": "AML / CFT",
+    "Rule_ID": "AML-04",
+    "Rule": "Report suspicious transactions to the relevant authority",
+    "Scenario": "A transaction is detected that is suspected to involve money laundering",
+    "Expected Behavior": "Draft a suspicious activity report and escalate it to the compliance officer"
+  },
+  {
+    "Category": "AML / CFT",
+    "Rule_ID": "AML-05",
+    "Rule": "The customer must not be notified that they are under suspicion",
+    "Scenario": "The customer inquires about the reason their transaction was suspended",
+    "Expected Behavior": "Do not disclose any information indicating an investigation or report exists"
+  },
+  {
+    "Category": "Beneficial Ownership",
+    "Rule_ID": "BO-01",
+    "Rule": "Identify the beneficial owner when the statutory ownership threshold is exceeded",
+    "Scenario": "A company invests through a multi-layered ownership structure",
+    "Expected Behavior": "Identify the beneficial owner and verify their identity"
+  },
+  {
+    "Category": "Beneficial Ownership",
+    "Rule_ID": "BO-02",
+    "Rule": "Identify the person with effective control when there is no clear direct owner",
+    "Scenario": "No shareholder exceeds the defined ownership percentage",
+    "Expected Behavior": "Treat the person with effective control, or senior management, as the beneficial owner"
+  },
+  {
+    "Category": "Beneficial Ownership",
+    "Rule_ID": "BO-03",
+    "Rule": "Verify beneficial owner data against official records",
+    "Scenario": "Company data differs from data in the \"Wathq\" registry",
+    "Expected Behavior": "Suspend the account until the data is corrected"
+  },
+  {
+    "Category": "Beneficial Ownership",
+    "Rule_ID": "BO-04",
+    "Rule": "Update beneficial owner data within the statutory deadline",
+    "Scenario": "Ownership structure changes without updating the data",
+    "Expected Behavior": "Raise an alert and suspend some services until the update is completed"
+  },
+  {
+    "Category": "Beneficial Ownership",
+    "Rule_ID": "BO-05",
+    "Rule": "Detect attempts to conceal the beneficial owner",
+    "Scenario": "A sham ownership structure exists to hide the true owner",
+    "Expected Behavior": "Classify the case as high risk and apply Enhanced Due Diligence (EDD) procedures"
+  },
+  {
+    "Category": "Transaction Monitoring",
+    "Rule_ID": "TM-01",
+    "Rule": "Monitor all transactions in real time",
+    "Scenario": "Repeated transactions executed within a short time window",
+    "Expected Behavior": "Issue an alert and suspend the transaction for review"
+  },
+  {
+    "Category": "Transaction Monitoring",
+    "Rule_ID": "TM-02",
+    "Rule": "Compare transactions against the customer's expected financial behavior",
+    "Scenario": "An investment is executed that is inconsistent with the customer's income",
+    "Expected Behavior": "Raise the risk level and request additional information"
+  },
+  {
+    "Category": "Transaction Monitoring",
+    "Rule_ID": "TM-03",
+    "Rule": "Detect accounts used for rapidly passing funds through",
+    "Scenario": "An account receives several transfers and immediately forwards them to a tokenized asset",
+    "Expected Behavior": "Freeze the transaction and issue a suspicion alert"
+  },
+  {
+    "Category": "Transaction Monitoring",
+    "Rule_ID": "TM-04",
+    "Rule": "Detect attempts to split transactions to bypass regulatory thresholds",
+    "Scenario": "A large amount is split into several smaller transactions",
+    "Expected Behavior": "Treat the transactions as a single transaction and halt it"
+  },
+  {
+    "Category": "Transaction Monitoring",
+    "Rule_ID": "TM-05",
+    "Rule": "Maintain a tamper-proof audit log of all transactions",
+    "Scenario": "Review of a previous decision to suspend a transaction",
+    "Expected Behavior": "Display the complete audit trail"
+  },
+  {
+    "Category": "Sanctions Screening",
+    "Rule_ID": "SAN-01",
+    "Rule": "Screen all customers against sanctions lists before and during the relationship",
+    "Scenario": "Registration of a customer listed on sanctions lists",
+    "Expected Behavior": "Reject registration and freeze the account"
+  },
+  {
+    "Category": "Sanctions Screening",
+    "Rule_ID": "SAN-02",
+    "Rule": "Support approximate (fuzzy) name matching",
+    "Scenario": "A slight variation in how the customer's name is written compared to the listed name",
+    "Expected Behavior": "Detect the match and escalate it for review"
+  },
+  {
+    "Category": "Sanctions Screening",
+    "Rule_ID": "SAN-03",
+    "Rule": "Screen the beneficial owner against sanctions lists as well",
+    "Scenario": "The beneficial owner is listed on a sanctions list even though the company itself is not",
+    "Expected Behavior": "Reject the transaction and freeze the account"
+  },
+  {
+    "Category": "Sanctions Screening",
+    "Rule_ID": "SAN-04",
+    "Rule": "Reject transfers originating from sanctioned entities or countries",
+    "Scenario": "A transfer arrives from a high-risk country",
+    "Expected Behavior": "Reject the transfer and apply enhanced due diligence procedures"
+  },
+  {
+    "Category": "Sanctions Screening",
+    "Rule_ID": "SAN-05",
+    "Rule": "Re-screen customers whenever sanctions lists are updated",
+    "Scenario": "A customer is added to a sanctions list after their account was opened",
+    "Expected Behavior": "Freeze assets and halt all transactions immediately"
+  },
+  {
+    "Category": "Customer Due Diligence (CDD)",
+    "Rule_ID": "CDD-01",
+    "Rule": "Classify customers by risk level",
+    "Scenario": "A high-risk customer registers",
+    "Expected Behavior": "Apply enhanced due diligence procedures"
+  },
+  {
+    "Category": "Customer Due Diligence (CDD)",
+    "Rule_ID": "CDD-02",
+    "Rule": "Establish the source of funds and the purpose of the investment",
+    "Scenario": "The customer does not disclose the source of funds",
+    "Expected Behavior": "Suspend the account until the information is completed"
+  },
+  {
+    "Category": "Customer Due Diligence (CDD)",
+    "Rule_ID": "CDD-03",
+    "Rule": "Apply Enhanced Due Diligence (EDD) to high-risk categories",
+    "Scenario": "Registration of a Politically Exposed Person (PEP)",
+    "Expected Behavior": "Require senior management approval and additional verification procedures"
+  },
+  {
+    "Category": "Customer Due Diligence (CDD)",
+    "Rule_ID": "CDD-04",
+    "Rule": "Any third party relied upon must be subject to regulatory oversight",
+    "Scenario": "Reliance on an unlicensed verification provider",
+    "Expected Behavior": "Reject the verification process and treat it as a compliance violation"
+  },
+  {
+    "Category": "Customer Due Diligence (CDD)",
+    "Rule_ID": "CDD-05",
+    "Rule": "Update customer data periodically",
+    "Scenario": "The customer data review period has expired",
+    "Expected Behavior": "Request a data update before allowing continued activity"
+  },
+  {
+    "Category": "Investor Protection",
+    "Rule_ID": "INV-01",
+    "Rule": "Enforce investment limits for non-qualified investors",
+    "Scenario": "An attempt to invest an amount exceeding the regulatory limit",
+    "Expected Behavior": "Reject the transaction with an explanation of the reason"
+  },
+  {
+    "Category": "Investor Protection",
+    "Rule_ID": "INV-02",
+    "Rule": "Verify that qualified investor requirements are met",
+    "Scenario": "An upgrade request submitted with insufficient supporting documents",
+    "Expected Behavior": "Reject the upgrade and escalate it for review"
+  },
+  {
+    "Category": "Investor Protection",
+    "Rule_ID": "INV-03",
+    "Rule": "Enforce the maximum limit on uninvested cash",
+    "Scenario": "The uninvested cash balance exceeds the permitted limit",
+    "Expected Behavior": "Notify the customer and restrict certain transactions"
+  },
+  {
+    "Category": "Investor Protection",
+    "Rule_ID": "INV-04",
+    "Rule": "Present regulatory disclosures before executing an investment",
+    "Scenario": "An attempt to bypass the risk disclosure screen",
+    "Expected Behavior": "Block the transaction until the disclosure is accepted"
+  },
+  {
+    "Category": "Investor Protection",
+    "Rule_ID": "INV-05",
+    "Rule": "Segregate client funds from company funds",
+    "Scenario": "The operating platform company becomes insolvent",
+    "Expected Behavior": "Continue protecting investor assets and prevent commingling with company funds"
+  }
+]

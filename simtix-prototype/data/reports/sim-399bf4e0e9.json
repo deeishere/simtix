@@ -1,0 +1,274 @@
+{
+  "simulation_id": "sim-399bf4e0e9",
+  "project": {
+    "project_name": "Test",
+    "industry": "Payments",
+    "country": "Saudi Arabia",
+    "regulator": "SAMA",
+    "modules": [
+      "AML"
+    ]
+  },
+  "events": [
+    {
+      "phase": "generating_customers",
+      "message": "Generating synthetic customers...",
+      "progress": 15
+    },
+    {
+      "phase": "generating_transactions",
+      "message": "Generating synthetic transactions...",
+      "progress": 30
+    },
+    {
+      "phase": "merging_data",
+      "message": "Merging customers and transactions...",
+      "progress": 45
+    },
+    {
+      "phase": "loading_rules",
+      "message": "Loading regulatory rules from Excel...",
+      "progress": 60
+    },
+    {
+      "phase": "running_gpt",
+      "message": "Running GPT compliance analysis...",
+      "progress": 75
+    },
+    {
+      "phase": "building_report",
+      "message": "Building readiness report...",
+      "progress": 90
+    },
+    {
+      "phase": "customer_generated",
+      "message": "Generated 100 synthetic customers",
+      "progress": 20
+    },
+    {
+      "phase": "transaction_created",
+      "message": "Generated 500 synthetic transactions",
+      "progress": 35
+    },
+    {
+      "phase": "data_merged",
+      "message": "Merged 500 customer-transaction records",
+      "progress": 50
+    },
+    {
+      "phase": "gpt_analysis",
+      "message": "GPT analyzed TXN-000001: Compliant",
+      "progress": 75
+    },
+    {
+      "phase": "gpt_analysis",
+      "message": "GPT analyzed TXN-000002: Compliant",
+      "progress": 75
+    },
+    {
+      "phase": "gpt_analysis",
+      "message": "GPT analyzed TXN-000003: Non-Compliant",
+      "progress": 75
+    },
+    {
+      "phase": "gpt_analysis",
+      "message": "GPT analyzed TXN-000004: Non-Compliant",
+      "progress": 75
+    },
+    {
+      "phase": "gpt_analysis",
+      "message": "GPT analyzed TXN-000005: Non-Compliant",
+      "progress": 75
+    },
+    {
+      "phase": "gpt_analysis",
+      "message": "GPT analyzed TXN-000006: Non-Compliant",
+      "progress": 75
+    },
+    {
+      "phase": "readiness_updated",
+      "message": "Readiness score updated to 50%",
+      "progress": 90
+    },
+    {
+      "phase": "complete",
+      "message": "Simulation complete",
+      "progress": 100
+    }
+  ],
+  "statistics": {
+    "rules_source": "Regulatory_Rules_Features_Extraction.xlsx",
+    "gpt_cases_analyzed": 6,
+    "compliant_cases": 2,
+    "non_compliant_cases": 4,
+    "manual_review_cases": 0,
+    "critical_violations": 0,
+    "high_violations": 0
+  },
+  "violations": [],
+  "module_scores": {
+    "Compliance": 50,
+    "GPT Analysis": 50
+  },
+  "readiness_score": 50,
+  "ai_report": {
+    "customer_id": "CUST-00089",
+    "transaction_id": "TXN-000001",
+    "decision": "Compliant",
+    "overall_risk": "Low",
+    "violations": [],
+    "summary": "GPT analysis failed: Connection error.. Fallback result shown.",
+    "recommendations": [
+      "Configure GITHUB_TOKEN and rerun the simulation."
+    ],
+    "_source": "fallback",
+    "categories": [
+      "AML / CFT",
+      "Investor Protection",
+      "Sanctions Screening",
+      "Transaction Monitoring"
+    ],
+    "rules_evaluated": 20
+  },
+  "customers_count": 100,
+  "transactions_count": 500,
+  "primary_analysis": {
+    "customer_id": "CUST-00089",
+    "transaction_id": "TXN-000001",
+    "decision": "Compliant",
+    "overall_risk": "Low",
+    "violations": [],
+    "summary": "GPT analysis failed: Connection error.. Fallback result shown.",
+    "recommendations": [
+      "Configure GITHUB_TOKEN and rerun the simulation."
+    ],
+    "_source": "fallback",
+    "categories": [
+      "AML / CFT",
+      "Investor Protection",
+      "Sanctions Screening",
+      "Transaction Monitoring"
+    ],
+    "rules_evaluated": 20
+  },
+  "gpt_analyses": [
+    {
+      "customer_id": "CUST-00089",
+      "transaction_id": "TXN-000001",
+      "decision": "Compliant",
+      "overall_risk": "Low",
+      "violations": [],
+      "summary": "GPT analysis failed: Connection error.. Fallback result shown.",
+      "recommendations": [
+        "Configure GITHUB_TOKEN and rerun the simulation."
+      ],
+      "_source": "fallback",
+      "categories": [
+        "AML / CFT",
+        "Investor Protection",
+        "Sanctions Screening",
+        "Transaction Monitoring"
+      ],
+      "rules_evaluated": 20
+    },
+    {
+      "customer_id": "CUST-00029",
+      "transaction_id": "TXN-000002",
+      "decision": "Compliant",
+      "overall_risk": "Low",
+      "violations": [],
+      "summary": "GPT analysis failed: Connection error.. Fallback result shown.",
+      "recommendations": [
+        "Configure GITHUB_TOKEN and rerun the simulation."
+      ],
+      "_source": "fallback",
+      "categories": [
+        "AML / CFT",
+        "Investor Protection",
+        "Sanctions Screening",
+        "Transaction Monitoring"
+      ],
+      "rules_evaluated": 20
+    },
+    {
+      "customer_id": "CUST-00045",
+      "transaction_id": "TXN-000003",
+      "decision": "Non-Compliant",
+      "overall_risk": "Medium",
+      "violations": [],
+      "summary": "GPT analysis failed: Connection error.. Fallback result shown.",
+      "recommendations": [
+        "Configure GITHUB_TOKEN and rerun the simulation."
+      ],
+      "_source": "fallback",
+      "categories": [
+        "AML / CFT",
+        "Investor Protection",
+        "KYC & Onboarding",
+        "Sanctions Screening",
+        "Transaction Monitoring"
+      ],
+      "rules_evaluated": 25
+    },
+    {
+      "customer_id": "CUST-00033",
+      "transaction_id": "TXN-000004",
+      "decision": "Non-Compliant",
+      "overall_risk": "Medium",
+      "violations": [],
+      "summary": "GPT analysis failed: Connection error.. Fallback result shown.",
+      "recommendations": [
+        "Configure GITHUB_TOKEN and rerun the simulation."
+      ],
+      "_source": "fallback",
+      "categories": [
+        "AML / CFT",
+        "Investor Protection",
+        "KYC & Onboarding",
+        "Sanctions Screening",
+        "Transaction Monitoring"
+      ],
+      "rules_evaluated": 25
+    },
+    {
+      "customer_id": "CUST-00028",
+      "transaction_id": "TXN-000005",
+      "decision": "Non-Compliant",
+      "overall_risk": "Medium",
+      "violations": [],
+      "summary": "GPT analysis failed: Connection error.. Fallback result shown.",
+      "recommendations": [
+        "Configure GITHUB_TOKEN and rerun the simulation."
+      ],
+      "_source": "fallback",
+      "categories": [
+        "AML / CFT",
+        "Customer Due Diligence (CDD)",
+        "KYC & Onboarding",
+        "Sanctions Screening",
+        "Transaction Monitoring"
+      ],
+      "rules_evaluated": 25
+    },
+    {
+      "customer_id": "CUST-00038",
+      "transaction_id": "TXN-000006",
+      "decision": "Non-Compliant",
+      "overall_risk": "Medium",
+      "violations": [],
+      "summary": "GPT analysis failed: Connection error.. Fallback result shown.",
+      "recommendations": [
+        "Configure GITHUB_TOKEN and rerun the simulation."
+      ],
+      "_source": "fallback",
+      "categories": [
+        "AML / CFT",
+        "Investor Protection",
+        "KYC & Onboarding",
+        "Sanctions Screening",
+        "Transaction Monitoring"
+      ],
+      "rules_evaluated": 25
+    }
+  ]
+}

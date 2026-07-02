@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simtix | AI Regulatory Simulation Platform</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="top-nav">
+      <button class="brand nav-link" data-page="landing" type="button" aria-label="Simtix home">
+        <span class="brand-mark">S</span>
+        <span>Simtix</span>
+      </button>
+      <nav aria-label="Primary navigation">
+        <button class="nav-link active" data-page="landing" type="button">Home</button>
+        <button class="nav-link app-only" data-page="projects" type="button">Projects</button>
+        <button class="nav-link app-only" data-page="create" type="button">Simulations</button>
+        <button class="nav-link app-only" data-page="documents" type="button">Documents</button>
+        <button class="nav-link app-only" data-page="dashboard" type="button">Dashboard</button>
+        <button class="nav-link app-only" data-page="results" type="button">Reports</button>
+        <button class="nav-link app-only" data-page="assistant" type="button">AI Assistant</button>
+        <button class="nav-link app-only" data-page="team" type="button">Team</button>
+        <button class="nav-link app-only" data-page="notifications" type="button">Notifications</button>
+      </nav>
+      <div class="nav-actions">
+        <button id="languageToggle" class="ghost-button" type="button" aria-label="Switch language">العربية</button>
+        <button class="ghost-button nav-link public-only" data-page="auth" type="button">Login</button>
+        <button class="primary-button nav-link public-only" data-page="auth" type="button">Create Account</button>
+        <button class="avatar nav-link app-only" data-page="settings" type="button" aria-label="Profile">A</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="page active" data-route="landing">
+        <section class="landing-hero">
+          <canvas id="networkCanvas" aria-hidden="true"></canvas>
+          <div class="hero-glass">
+            <p class="eyebrow">AI Regulatory Simulation Platform</p>
+            <h1>Test your financial products before regulators do.</h1>
+            <p>
+              Run AI-powered compliance simulations, detect risks early, and improve regulatory readiness before
+              submission.
+            </p>
+            <div class="button-row">
+              <button class="primary-button nav-link" data-page="create" type="button">Start Simulation</button>
+              <button class="glass-button nav-link" data-page="auth" type="button">Book Demo</button>
+            </div>
+          </div>
+          <div class="hero-stat glass-panel">
+            <span>92%</span>
+            <p>Average readiness score after recommendations</p>
+          </div>
+        </section>
+
+        <section class="site-section">
+          <div class="section-heading">
+            <p class="eyebrow">Features</p>
+            <h2>Everything teams need before regulatory review.</h2>
+          </div>
+          <div class="feature-grid">
+            <article><span>AI</span><h3>AI Compliance Simulation</h3><p>Run thousands of regulatory scenarios.</p></article>
+            <article><span>TX</span><h3>Synthetic Transactions</h3><p>Generate realistic financial activities safely.</p></article>
+            <article><span>RD</span><h3>Risk Detection</h3><p>Find compliance issues before submission.</p></article>
+            <article><span>RP</span><h3>Readiness Reports</h3><p>Receive detailed AI-generated recommendations.</p></article>
+          </div>
+        </section>
+
+        <section class="site-section">
+          <div class="section-heading">
+            <p class="eyebrow">How it works</p>
+            <h2>From product documents to a regulator-ready action plan.</h2>
+          </div>
+          <div class="process-line">
+            <div>Create Project</div>
+            <div>Upload Documentation</div>
+            <div>Configure Regulations</div>
+            <div>Run Simulation</div>
+            <div>Receive AI Report</div>
+            <div>Improve Product</div>
+            <div>Submit to Regulator</div>
+          </div>
+        </section>
+
+        <section class="site-section">
+          <div class="section-heading">
+            <p class="eyebrow">Industries</p>
+            <h2>Built for modern financial products.</h2>
+          </div>
+          <div class="industry-grid">
+            <article>Digital Banks</article>
+            <article>Tokenized Assets</article>
+            <article>Open Banking</article>
+            <article>Insurance</article>
+            <article>Crowdfunding</article>
+            <article>Payments</article>
+          </div>
+        </section>
+
+        <section class="cta-band">
+          <div>
+            <p class="eyebrow">Ready to test your product?</p>
+            <h2>Start your first simulation.</h2>
+          </div>
+          <button class="primary-button nav-link" data-page="auth" type="button">Create Account</button>
+        </section>
+      </section>
+
+      <section class="page auth-page" data-route="auth">
+        <div class="auth-art">
+          <div class="orbital-card glass-panel">
+            <span>AI</span>
+            <strong>Regulatory readiness workspace</strong>
+            <p>Teams, documents, simulations, and reports in one secure place.</p>
+          </div>
+        </div>
+        <form class="auth-form">
+          <p class="eyebrow">Create Account</p>
+          <h2>Start testing with Simtix.</h2>
+          <label>Email<input type="email" value="rehaf@simtix.ai" /></label>
+          <label>Password<input type="password" value="secure-access" /></label>
+          <label>Company<input type="text" value="Simtix Labs" /></label>
+          <div class="two-fields">
+            <label>Industry<select><option>Tokenized Assets</option><option>Digital Banks</option><option>Payments</option></select></label>
+            <label>Country<select><option>Saudi Arabia</option><option>UAE</option><option>Bahrain</option></select></label>
+          </div>
+          <button class="primary-button nav-link" data-page="home" type="button">Create Account</button>
+          <p class="muted">Already have one? <button class="text-button nav-link" data-page="home" type="button">Login</button></p>
+          <div class="social-row">
+            <button class="social-login" type="button">Google</button>
+            <button class="social-login" type="button">Microsoft</button>
+            <button class="social-login" type="button">GitHub</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="page app-page" data-route="home">
+        <div class="welcome-panel">
+          <p class="eyebrow">User Home</p>
+          <h1>Welcome back, Rehaf.</h1>
+          <p>Continue where you left off.</p>
+        </div>
+        <div class="content-grid">
+          <section class="content-card span-2">
+            <div class="card-heading"><h2>Recent Projects</h2><button class="small-button nav-link" data-page="projects" type="button">View all</button></div>
+            <div class="project-list">
+              <article><div><h3>Namaa Wallet</h3><p>87% Ready</p></div><button class="text-button nav-link" data-page="results" type="button">Continue -></button></article>
+              <article><div><h3>Riyadh Sukuk Platform</h3><p>Running Simulation</p></div><button class="text-button nav-link" data-page="live" type="button">View -></button></article>
+            </div>
+          </section>
+          <section class="content-card">
+            <h2>Quick Actions</h2>
+            <div class="quick-actions">
+              <button class="primary-button nav-link" data-page="create" type="button">+ New Simulation</button>
+              <button class="ghost-button nav-link" data-page="team" type="button">+ Invite Team</button>
+              <button class="ghost-button nav-link" data-page="documents" type="button">+ Upload Documents</button>
+              <button class="ghost-button nav-link" data-page="results" type="button">+ View Reports</button>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="page app-page" data-route="create">
+        <div class="page-title">
+          <p class="eyebrow">Create New Simulation</p>
+          <h1>Build a regulatory test in four steps.</h1>
+        </div>
+        <div class="wizard">
+          <aside class="wizard-steps">
+            <button class="wizard-step active" data-step="0" type="button">1 Project</button>
+            <button class="wizard-step" data-step="1" type="button">2 Upload</button>
+            <button class="wizard-step" data-step="2" type="button">3 Modules</button>
+            <button class="wizard-step" data-step="3" type="button">4 Settings</button>
+          </aside>
+          <section class="wizard-panel">
+            <div class="wizard-screen active" data-wizard="0">
+              <h2>Project details</h2>
+              <div class="form-grid">
+                <label>Project Name<input value="Riyadh Sukuk Platform" /></label>
+                <label>Industry<select><option>Tokenized Assets</option><option>Open Banking</option><option>Digital Banks</option></select></label>
+                <label>Country<select><option>Saudi Arabia</option><option>UAE</option></select></label>
+                <label>Regulator<select><option>SAMA</option><option>CMA</option><option>Central Bank</option><option>Other</option></select></label>
+              </div>
+            </div>
+            <div class="wizard-screen" data-wizard="1">
+              <h2>Upload documentation</h2>
+              <label class="drop-zone" for="simulationFiles">
+                <input id="simulationFiles" type="file" multiple accept=".pdf,.doc,.docx,.txt,.yaml,.yml,.json" />
+                <strong>Upload or drag documentation</strong>
+                <span>Business model, architecture PDFs, policy documents, API documentation, and contracts</span>
+              </label>
+              <div id="simulationFileList" class="upload-chips"><span>business-model.pdf</span><span>architecture.pdf</span><span>api-docs.yaml</span></div>
+            </div>
+            <div class="wizard-screen" data-wizard="2">
+              <h2>Choose compliance modules</h2>
+              <div class="module-grid">
+                <label><input type="checkbox" name="module" value="AML" checked /> AML</label>
+                <label><input type="checkbox" name="module" value="KYC" checked /> KYC</label>
+                <label><input type="checkbox" name="module" value="Transaction Monitoring" checked /> Transaction Monitoring</label>
+                <label><input type="checkbox" name="module" value="Sanctions" checked /> Sanctions</label>
+                <label><input type="checkbox" name="module" value="Tokenization" checked /> Tokenization</label>
+                <label><input type="checkbox" name="module" value="Consumer Protection" /> Consumer Protection</label>
+                <label><input type="checkbox" name="module" value="Cybersecurity" /> Cybersecurity</label>
+                <label><input type="checkbox" name="module" value="Open Banking" /> Open Banking</label>
+              </div>
+            </div>
+            <div class="wizard-screen" data-wizard="3">
+              <h2>Simulation settings</h2>
+              <div class="form-grid">
+                <label>Number of Customers<input id="simCustomerCount" type="number" min="1" value="100" /></label>
+                <label>Total Transactions<input id="simTransactionCount" type="number" min="1" value="500" /></label>
+                <label>Random Seed<input id="simSeed" type="number" value="42" /></label>
+                <label>Transactions per Customer (info)<input id="simTxPerCustomer" type="text" readonly value="5.0" /></label>
+              </div>
+              <p class="muted">Example: 1000 customers with 5000 transactions, seed 42.</p>
+            </div>
+            <div class="wizard-actions">
+              <button id="prevStep" class="ghost-button" type="button">Back</button>
+              <button id="nextStep" class="primary-button" type="button">Next</button>
+              <button id="startLive" class="primary-button hidden nav-link" data-page="live" type="button">Start Simulation</button>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="page app-page" data-route="live">
+        <div class="page-title">
+          <p class="eyebrow">Live Simulation</p>
+          <h1>Monitor regulatory checks in real time.</h1>
+        </div>
+        <div class="live-layout">
+          <section class="content-card progress-card">
+            <h2>Simulation progress</h2>
+            <div class="progress-number"><span id="progressValue">0</span>%</div>
+            <div class="progress-bar"><span id="progressBar"></span></div>
+            <p>Estimated <strong>2 minutes</strong></p>
+            <p class="monitoring-note">Monitoring synthetic events generated for this simulation.</p>
+            <button id="viewResultsNow" class="small-button" type="button">View Results</button>
+          </section>
+          <section class="content-card live-events">
+            <h2>Live events</h2>
+            <ul id="liveEvents"></ul>
+          </section>
+          <section class="content-card ai-mini">
+            <h2>AI Assistant</h2>
+            <p>Review findings with Simtix AI</p>
+            <button class="prompt-chip" type="button">Explain this finding</button>
+            <button class="prompt-chip" type="button">What regulation applies?</button>
+            <button class="prompt-chip" type="button">Suggest remediation steps</button>
+          </section>
+        </div>
+        <section class="content-card compliance-case-card">
+          <div class="card-heading">
+            <div>
+              <h2>Current compliance check</h2>
+              <p id="complianceCaseMeta">Loading regulatory data…</p>
+            </div>
+            <span id="complianceDecisionBadge" class="decision-badge pending">Pending</span>
+          </div>
+          <div id="complianceCategories" class="category-chips"></div>
+          <pre id="complianceCasePreview" class="case-preview">Waiting for first analysis…</pre>
+        </section>
+        <section class="content-card monitoring-panel">
+          <div class="card-heading">
+            <div>
+              <h2>Synthetic monitoring stream</h2>
+              <p>Simtix is analyzing customer and transaction pairs against filtered regulatory rules using Simtix Compliance AI.</p>
+            </div>
+            <span id="complianceSourceBadge" class="status-live">Rule engine</span>
+          </div>
+          <div class="monitor-grid">
+            <article><span id="monitorTransactions">0</span><p>Transactions analyzed</p></article>
+            <article><span id="monitorAlerts">0</span><p>Risk alerts</p></article>
+            <article><span id="monitorRules">0</span><p>Rules evaluated</p></article>
+            <article><span id="monitorLatency">--</span><p>Avg. check time</p></article>
+          </div>
+        </section>
+      </section>
+
+      <section class="page app-page" data-route="dashboard">
+        <div class="page-title">
+          <p class="eyebrow">Executive Dashboard</p>
+          <h1>Regulatory readiness overview.</h1>
+        </div>
+        <div class="dashboard-metrics dashboard-metrics-wide">
+          <article class="metric-card"><span id="dashReadiness">--</span><p>Overall Readiness Score</p></article>
+          <article class="metric-card"><span id="dashCustomers">--</span><p>Total Customers</p></article>
+          <article class="metric-card"><span id="dashTransactions">--</span><p>Total Transactions</p></article>
+          <article class="metric-card"><span id="dashEvaluations">--</span><p>Total Rule Evaluations</p></article>
+          <article class="metric-card"><span id="dashFailedChecks">--</span><p>Total Failed Rule Checks</p></article>
+          <article class="metric-card"><span id="dashPassedChecks">--</span><p>Total Passed Rule Checks</p></article>
+          <article class="metric-card"><span id="dashHighRisk">--</span><p>High Risk Transactions</p></article>
+          <article class="metric-card"><span id="dashMediumRisk">--</span><p>Medium Risk Transactions</p></article>
+          <article class="metric-card"><span id="dashLowRisk">--</span><p>Low Risk Transactions</p></article>
+        </div>
+        <div class="chart-grid">
+          <section class="content-card"><h2>Compliance Score by Module</h2><canvas id="moduleChart"></canvas></section>
+          <section class="content-card"><h2>Violations by Severity</h2><canvas id="severityChart"></canvas></section>
+          <section class="content-card"><h2>Transaction Type Distribution</h2><canvas id="transactionChart"></canvas></section>
+          <section class="content-card"><h2>Risk Distribution</h2><canvas id="riskChart"></canvas></section>
+          <section class="content-card span-2"><h2>Top Failed Rules</h2><canvas id="topRulesChart"></canvas></section>
+        </div>
+        <section class="content-card">
+          <h2>Top Failed Rules</h2>
+          <div class="table-wrap">
+            <table class="data-table" id="topFailedRulesTable">
+              <thead><tr><th>Rule ID</th><th>Rule Name</th><th>Module</th><th>Severity</th><th>Failure Count</th></tr></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </section>
+        <section class="content-card">
+          <h2>Flagged Transactions</h2>
+          <div class="table-wrap">
+            <table class="data-table" id="flaggedTransactionsTable">
+              <thead><tr><th>Transaction ID</th><th>Customer ID</th><th>Risk</th><th>Decision</th><th>Failed Rules</th><th>Action</th></tr></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+
+      <section class="page app-page" data-route="results">
+        <div class="results-hero">
+          <div>
+            <p class="eyebrow">Transaction AI Report</p>
+            <h1>Detailed Compliance Analysis</h1>
+            <p id="resultsCaseIds" class="results-case-ids">Select a flagged transaction from the dashboard.</p>
+          </div>
+          <div class="score-badge">
+            <span id="readinessScoreValue">--</span>
+            <strong id="readinessStatusLabel">--</strong>
+          </div>
+        </div>
+        <div class="button-row">
+          <button id="backToDashboard" class="ghost-button nav-link" data-page="dashboard" type="button">← Back to Dashboard</button>
+        </div>
+        <section class="content-card">
+          <h2>Rule Evaluations</h2>
+          <div id="violationsList" class="violations-list">
+            <p class="muted">Run a simulation to generate GPT compliance findings.</p>
+          </div>
+        </section>
+        <section class="content-card ai-summary">
+          <h2>AI Summary</h2>
+          <p id="aiSummaryText">GPT summary appears here after simulation completes.</p>
+          <h3>Recommendations</h3>
+          <ul id="recommendationsList" class="recommendations-list"></ul>
+          <details class="raw-json-panel">
+            <summary>View raw GPT JSON</summary>
+            <pre id="rawGptOutput" class="case-preview">{}</pre>
+          </details>
+          <div class="button-row"><button id="exportPdf" class="ghost-button" type="button">Export PDF</button><button id="exportExcel" class="ghost-button" type="button">Export Excel</button><button id="shareReport" class="ghost-button" type="button">Share</button><button id="submitReport" class="primary-button" type="button">Submit</button></div>
+        </section>
+      </section>
+
+      <section class="page app-page" data-route="projects">
+        <div class="page-title"><p class="eyebrow">Projects</p><h1>All regulatory simulations.</h1></div>
+        <div class="toolbar"><input id="projectSearch" placeholder="Search projects" /><select><option>Filter</option><option>Completed</option><option>Running</option><option>Draft</option></select><select><option>Sort</option><option>Newest</option><option>Readiness</option></select></div>
+        <div class="project-grid" id="projectGrid">
+          <article><h3>Namaa Wallet</h3><p>Completed</p><span>92%</span><button class="text-button nav-link" data-page="results">Open</button></article>
+          <article><h3>Open Finance Gateway</h3><p>Running</p><span>71%</span><button class="text-button nav-link" data-page="live">Open</button></article>
+          <article><h3>Takaful Claims App</h3><p>Draft</p><span>--</span><button class="text-button nav-link" data-page="create">Open</button></article>
+        </div>
+      </section>
+
+      <section class="page app-page" data-route="documents">
+        <div class="page-title"><p class="eyebrow">Documents</p><h1>Centralized evidence and policy library.</h1></div>
+        <div class="documents-layout">
+          <div class="folder-grid">
+            <article data-folder="Architecture">Architecture</article><article data-folder="Policies">Policies</article><article data-folder="Compliance">Compliance</article><article data-folder="Contracts">Contracts</article><article data-folder="Risk">Risk</article><article data-folder="Reports">Reports</article>
+          </div>
+          <aside class="content-card doc-preview">
+            <h2>Document preview</h2>
+            <label class="document-upload" for="documentFiles">
+              <input id="documentFiles" type="file" multiple accept=".pdf,.doc,.docx,.txt,.yaml,.yml,.json" />
+              Upload files
+            </label>
+            <div id="documentPreview" class="pdf-preview">architecture.pdf</div>
+            <div id="documentFileList" class="upload-chips"></div>
+            <p id="versionHistory">Version history: v1, v2, v3</p><p id="documentComments">Comments: 8 open comments</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="page app-page" data-route="team">
+        <div class="page-title"><p class="eyebrow">Team Collaboration</p><h1>Manage members and permissions.</h1></div>
+        <div class="content-card">
+          <div class="member-row"><span>Rehaf Al-Faleh</span><strong>Owner</strong><em>Online</em><select><option>Admin</option></select></div>
+          <div class="member-row"><span>Sara Al-Nuhait</span><strong>Compliance Officer</strong><em>Online</em><select><option>Editor</option></select></div>
+          <div class="member-row"><span>Doaa Al-Ghamdi</span><strong>Developer</strong><em>Away</em><select><option>Viewer</option></select></div>
+          <button id="inviteMember" class="primary-button" type="button">Invite</button>
+        </div>
+      </section>
+
+      <section class="page app-page" data-route="notifications">
+        <div class="page-title"><p class="eyebrow">Notifications</p><h1>Recent activity.</h1></div>
+        <ol class="notification-list">
+          <li><strong>Simulation Completed</strong><span>5 min ago</span></li>
+          <li><strong>AI Report Ready</strong><span>Yesterday</span></li>
+          <li><strong>New Comment</strong><span>2 days ago</span></li>
+        </ol>
+      </section>
+
+      <section class="page app-page" data-route="assistant">
+        <div class="chat-shell">
+          <div class="page-title"><p class="eyebrow">AI Chat Assistant</p><h1>Regulatory guidance assistant.</h1></div>
+          <div id="chatMessages" class="chat-messages">
+            <div class="chat user">How do I comply with SAMA Tokenization rules?</div>
+            <div class="chat bot">I can map the requirement to relevant regulations, suggested fixes, linked documents, and a generated checklist.</div>
+          </div>
+          <div class="chat-input"><input id="chatInput" placeholder="Ask about a regulation or finding" /><button id="sendChat" class="primary-button">Send</button></div>
+        </div>
+      </section>
+
+      <section class="page app-page" data-route="settings">
+        <div class="page-title"><p class="eyebrow">Settings</p><h1>Company workspace settings.</h1></div>
+        <section class="content-card api-settings">
+          <h2>GitHub Models API</h2>
+          <p class="muted">Connect your GitHub token for live GPT-4.1-nano compliance analysis. Alternatively, run <code>python server.py</code> with <code>GITHUB_TOKEN</code> set.</p>
+          <label>GitHub Token<input id="githubTokenInput" type="password" placeholder="ghp_…" autocomplete="off" /></label>
+          <div class="button-row">
+            <button id="saveGithubToken" class="primary-button" type="button">Save Token</button>
+            <button id="clearGithubToken" class="ghost-button" type="button">Clear</button>
+          </div>
+          <p id="apiStatusText" class="api-status">Using rule-based fallback until an API token or proxy server is configured.</p>
+        </section>
+        <div class="settings-grid">
+          <article data-setting="Company">Company</article><article data-setting="Brand">Brand</article><article data-setting="Security">Security</article><article data-setting="Billing">Billing</article><article data-setting="Notifications">Notifications</article><article data-setting="Language">Language</article><article data-setting="Theme">Theme</article>
+        </div>
+      </section>
+    </main>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <footer class="footer">
+      <strong>Simtix</strong>
+      <nav><button type="button" class="footer-link">About</button><button type="button" class="footer-link">Privacy</button><button type="button" class="footer-link">Security</button><button type="button" class="footer-link">Documentation</button><button type="button" class="footer-link">API</button><button type="button" class="footer-link">Support</button><button type="button" class="footer-link">Contact</button></nav>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="simulation-client.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
